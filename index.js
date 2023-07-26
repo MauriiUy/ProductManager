@@ -1,3 +1,14 @@
+const express = require('express');
+const app = express();
+const port = 8080;
+
+const routes = require('./routes'); // Importa las rutas desde el archivo routes.js
+app.use('/', routes); // Usa las rutas definidas en el archivo routes.js
+
+app.listen(port, () => {
+  console.log(`Servidor iniciado en puerto ${port}`);
+});
+
 const ProductManager = require('./ProductManager');
 
 const productManager = new ProductManager('Usuarios.json');
@@ -28,8 +39,38 @@ const product3 = {
   code: "ABC1231",
   stock: 52
 };
-
-
+const product4 = {
+  title: "Producto 4",
+  description: "Descripción 4",
+  price: 101,
+  thumbnail: "thumbnail1.jpg",
+  code: "ABC1231",
+  stock: 52
+};
+const product5 = {
+  title: "Producto 5",
+  description: "Descripción 5",
+  price: 101,
+  thumbnail: "thumbnail1.jpg",
+  code: "ABC1231",
+  stock: 52
+};
+const product6 = {
+  title: "Producto 6",
+  description: "Descripción 6",
+  price: 101,
+  thumbnail: "thumbnail1.jpg",
+  code: "ABC1231",
+  stock: 52
+};
+const product7 = {
+  title: "Producto 7",
+  description: "Descripción 3",
+  price: 101,
+  thumbnail: "thumbnail1.jpg",
+  code: "ABC1231",
+  stock: 52
+};
 
 async function addProducts() {
   try {
